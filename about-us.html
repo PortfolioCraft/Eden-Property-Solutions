@@ -3846,24 +3846,26 @@ SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
                             <div id="freemium-ad-39761"></div>
                             
                                                        
-                                                                <header id="header">
-      <div class="header-content-div">
-        <a href="index.html">
-          <img
-            src="images/2.png"
-            alt="Company Logo"
-            id="header-img"
-        /></a>
-        <nav id="nav-bar">
-            <a href="index.html" class="nav-link">HOME</a>
-
-          <a href="#" class="nav-link">ABOUT</a>
-          <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
-          <a href="index.html#s" class="nav-link">CONTACT US</a>
-        </nav>
-      </div>
-    </header>
-                                                                </div>
+                            <div class="nav">
+                                <input type="checkbox" id="nav-check">
+                                <div class="nav-header">
+                                    <img src="images/36.png" alt="Logo">
+                                </div>
+                                <div class="nav-btn">
+                                    <label for="nav-check">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="nav-links">
+                                    <a href="index.html" target="_blank">Home</a>
+                                    <a href="#" target="_blank">About Us</a>
+                                    <a href="index.html#s" target="_blank">Contact</a>
+                                    <a href="portfolio.html" target="_blank">Portfolio</a>
+                                </div>
+                            </div>
+                            
                                                                 <style>
                                                                     @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
@@ -3875,98 +3877,135 @@ SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-body {
-  margin: 0;
-  padding: 0;
-}
-#header {
-  height: max-content;
-  font-family: "Montserrat", sans-serif;
-  width: 100%;
-  background-color: white;
-  padding: 1rem 0;
-  position: sticky;
-  z-index: 99;
-  top: 0;
-  left: 0;
-}
-@media (max-width: 800px) {
-  #header {
-    text-align: center;
-    height: auto;
-  }
-}
-.header-content-div {
-  max-width: 95rem;
-  width: auto;
-  margin: 0 auto;
-}
-@media (max-width: 991px) {
-  .header-content-div {
-    max-width: 75rem;
-  }
-}
-#header-img {
-  width: 150px; /* Set the initial width */
-  height: auto; /* Let the height adjust proportionally */
+* {
+  box-sizing: border-box;
 }
 
-@media screen and (max-width: 768px) {
-  /* Adjust the size for screens with a maximum width of 768px */
-  #header-img {
-    width: 100px; /* Set a smaller width for smaller screens */
-    height: auto; /* Maintain the aspect ratio */
-  }
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+  overflow-x: hidden; /* Add this to prevent horizontal scrolling */
 }
-nav {
-  position: relative;
-  top: 0.8rem;
+
+.nav {
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* Align items to the right and left */
+    align-items: center;
+    z-index: 2; /* Ensure the navbar is above other content */
+}
+
+.nav > .nav-header {
+    display: flex;
+    align-items: center;
+}
+
+.nav > .nav-header > img {
+    margin-top: 100px;
+    max-height: 100%; /* Ensure the logo fits within the navbar */
+    margin-right: 10px; /* Add space between the logo and title */
+}
+
+.nav > .nav-header > .nav-title {
+    font-size: 22px;
+    color: #000;
+}
+
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
   float: right;
-  font-size: 1.6rem;
-  font-weight: 500;
-  padding: 1.5rem 0;
+  font-size: 18px;
 }
-@media (max-width: 800px) {
-  nav {
-    position: static;
-    float: none;
-    font-size: 1.4rem;
-    padding: 0.5rem 1rem;
-  }
-}
-.nav-link {
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
   text-decoration: none;
-  color: #333;
-  margin: 0 0.5rem;
-  padding: 0 0.6rem;
-  transition: border-bottom 0.2s;
+  color: black;
 }
-@media (max-width: 475px) {
-  .nav-link {
-    margin: 0 0.2rem;
-    padding: 0 0.2rem;
-    font-size: 1.2rem;
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 3; /* Ensure the toggle button is above other content */
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover, .nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid black;
+  }
+
+  
+.nav > .nav-header > img {
+    margin-top: 100px;
+    max-height: 100%; /* Ensure the logo fits within the navbar */
+    margin-right: 10px; /* Add space between the logo and title */
+}
+
+  .nav > .nav-links {
+    text-align: center;
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: white;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    z-index: 1; /* Ensure the menu is above other content */
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
   }
 }
-.nav-link:hover {
-  color: #90EE90;
-  border-bottom: 2px solid #6D5EA9;
-}
-.nav-link:active {
-  color: #f84848;
-}
-.flexible {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-}
+
                                                                 </style>
- 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
       </style>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
     <div id="9529fa4b-31f1-4f54-978c-6fac6dfcc564" class="widget widget-about widget-about-about-2">
         <div data-ux="Widget" role="region" id="9529fa4b-31f1-4f54-978c-6fac6dfcc564" class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
             <div>
@@ -4048,7 +4087,7 @@ nav {
 
 
                     <div class="et_pb_text_inner" >
-                        <p style="text-align: center;">Selling through an agent vs selling to <span class='business_name'>Eden Property Solutions</span></p>
+                        <p style="text-align: center;">Selling through an agent vs selling to <span class='business_name'>Eben Property Solutions</span></p>
                     </div>
                 </div>
                 <div class="et_pb_module et_pb_text et_pb_text_19  et_pb_text_align_left et_pb_bg_layout_light" >
@@ -4060,8 +4099,8 @@ nav {
                         <thead>
                         <tr>
                         <th style="background-color:white; border: none;"></th>  
-                        <th style="background-color: #50c878;">Selling with agent</th>
-                          <th style="background-color: #50c878;">sold out to Eden Property Solutions</th>
+                        <th style="background-color: #9AC67B;">Selling with agent</th>
+                          <th style="background-color: #9AC67B;">sold out to Eben Property Solutions</th>
                          
                           </tr>
                         </thead>
@@ -4191,18 +4230,18 @@ td:last-of-type, th:last-of-type {
                 <div id="fdaf5d29-5107-4700-99bc-c7b82ba4cafd" class="widget widget-about widget-about-about-5">
                     <div data-ux="WidgetSplit" role="region" id="fdaf5d29-5107-4700-99bc-c7b82ba4cafd" class="x-el x-el-div x-el c1-1 c1-2 c1-3 c1-5 c1-6 c1-b1 c1-b2 c1-7 c1-8 c1-9 c1-a c1-b3 c1-b4 c1-b5 c1-b6 c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
                         <div>
-                            <div data-ux="ContainerSplit" class="x-el x-el-div c1-1 c1-2 c1-3g c1-3h c1-2a c1-28 c1-z c1-16 c1-39 c1-b7 c1-3 c1-b c1-c c1-d c1-b8 c1-b9 c1-ba c1-e c1-f c1-g" style="background-color: #90EE90;">
-                                <div data-ux="SplitItem" class="x-el x-el-div c1-1 c1-2 c1-16 c1-6r c1-bb c1-z c1-s c1-b c1-c c1-bc c1-bd c1-be c1-d c1-bf c1-bg c1-bh c1-bi c1-e c1-f c1-g" style="background-color: #90EE90;">
-                                    <section data-ux="SectionSplit" class="x-el x-el-section c1-1 c1-2 c1-5d c1-5i c1-6u c1-bj c1-6r c1-4 c1-x c1-y c1-bk c1-b c1-c c1-bl c1-bm c1-d c1-bn c1-bo c1-e c1-f c1-g" style="background-color: #90EE90;">
+                            <div data-ux="ContainerSplit" class="x-el x-el-div c1-1 c1-2 c1-3g c1-3h c1-2a c1-28 c1-z c1-16 c1-39 c1-b7 c1-3 c1-b c1-c c1-d c1-b8 c1-b9 c1-ba c1-e c1-f c1-g" style="background-color: #9AC67B;">
+                                <div data-ux="SplitItem" class="x-el x-el-div c1-1 c1-2 c1-16 c1-6r c1-bb c1-z c1-s c1-b c1-c c1-bc c1-bd c1-be c1-d c1-bf c1-bg c1-bh c1-bi c1-e c1-f c1-g" style="background-color: #9AC67B;">
+                                    <section data-ux="SectionSplit" class="x-el x-el-section c1-1 c1-2 c1-5d c1-5i c1-6u c1-bj c1-6r c1-4 c1-x c1-y c1-bk c1-b c1-c c1-bl c1-bm c1-d c1-bn c1-bo c1-e c1-f c1-g" style="background-color: #9AC67B;">
                                         <div data-ux="Container" class="x-el x-el-div c1-1 c1-2 c1-v c1-w c1-x c1-y c1-z c1-b c1-c c1-d c1-e c1-f c1-g">
                                             <div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-4 c1-1c c1-b c1-c c1-d c1-bp c1-bq c1-br c1-ax c1-bs c1-e c1-f c1-g">
                                                 <h2 role="heading" aria-level="2" data-ux="SectionSplitHeading" data-aid="ABOUT_SECTION_TITLE_RENDERED" alignmentOption="left" data-typography="HeadingBeta" class="x-el x-el-h2 c1-78 c1-3v c1-1s c1-1t c1-8p c1-3g c1-3h c1-2d c1-t c1-6n c1-b c1-c c1-8q c1-3z c1-8r c1-d c1-bp c1-e c1-f c1-g"><span data-ux="Element" class="">About Us</span></h2>
                                                 <div data-ux="Content" class="x-el x-el-div c1-1 c1-2 c1-2e c1-b c1-c c1-d c1-e c1-f c1-g">
                                                     <div data-ux="ContentBasic" index="0" class="x-el x-el-div x-el c1-1 c1-2 c1-16 c1-39 c1-4 c1-9h c1-6t c1-1c c1-9i c1-9j c1-b c1-c c1-9k c1-9l c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
-                                                        <h4 role="heading" aria-level="4" data-ux="ContentHeading" data-aid="ABOUT_HEADLINE_RENDERED0" data-typography="HeadingDelta" class="x-el x-el-h4 c1-9v c1-2 c1-1s c1-1t c1-79 c1-3g c1-3h c1-2d c1-2e c1-b c1-4y c1-6a c1-3z c1-6d c1-6f c1-6g c1-6h" style="font-family: 'Fjalla One', sans-serif;">Eden Property Solutions</h4>
+                                                        <h4 role="heading" aria-level="4" data-ux="ContentHeading" data-aid="ABOUT_HEADLINE_RENDERED0" data-typography="HeadingDelta" class="x-el x-el-h4 c1-9v c1-2 c1-1s c1-1t c1-79 c1-3g c1-3h c1-2d c1-2e c1-b c1-4y c1-6a c1-3z c1-6d c1-6f c1-6g c1-6h" style="font-family: 'Fjalla One', sans-serif;">Eben Property Solutions</h4>
                                                         <div data-ux="ContentText" alignment="left" data-aid="ABOUT_DESCRIPTION_RENDERED0" data-typography="BodyAlpha" class="x-el c1-1 c1-2 c1-1s c1-1t c1-4x c1-2d c1-2e c1-9y c1-9z c1-a0 c1-a1 c1-a2 c1-a3 c1-a4 c1-a5 c1-a6 c1-a7 c1-a8 c1-a9 c1-aa c1-ab c1-ac c1-ad c1-ae c1-af c1-ag c1-ah c1-ai c1-aj c1-ak c1-al c1-am c1-an c1-ao c1-ap c1-6r c1-b c1-4t c1-c c1-3z c1-aq c1-ar c1-as c1-d c1-e c1-f c1-g x-rt">
                                                             <p style="margin:0"><span>We are a real estate investment company that provides solutions to help homeowners sell their house fast. We buy Land fast with cash, and buy homes in any condition, in any situation.</span></p>
-                                                            <p style="margin:0"><span>Eden Property Solutions has the knowledge and ability to help you, regardless of your situation. We started with a mission to help homeowners who need to sell their house quickly. We understand that “traditional” home selling options aren’t for everyone.</span></p>
+                                                            <p style="margin:0"><span>Eben Property Solutions has the knowledge and ability to help you, regardless of your situation. We started with a mission to help homeowners who need to sell their house quickly. We understand that “traditional” home selling options aren’t for everyone.</span></p>
                                                             <p style="margin:0"><span>We exist to be the SOLUTION that many homeowners are searching for. Whether you are coming to us first, or have tried to sell your home with no luck, we can help.</span></p>
                                                         </div>
                                                         <div data-ux="Block" class="x-el x-el-div c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g"><a data-ux-btn="secondary" data-ux="ButtonSecondary" shape="PILL" decoration="NONE" shadow="NONE" data-aid="ABOUT_CTA_BTN_RENDERED0" href="#" target=""
@@ -4294,7 +4333,7 @@ td:last-of-type, th:last-of-type {
     <div id="3f2bc562-c88d-48c7-b5e0-c549e9f35ad7" class="widget widget-footer widget-footer-footer-2">
         <div data-ux="Widget" role="contentinfo" id="3f2bc562-c88d-48c7-b5e0-c549e9f35ad7" class="x-el x-el-div x-el c1-1 c1-2 c1-bu c1-b c1-c c1-d c1-e c1-f c1-g c1-1 c1-2 c1-b c1-c c1-d c1-e c1-f c1-g">
             <div>
-            <section data-ux="Section" class="x-el x-el-section c1-1 c1-2 c1-bu c1-5i c1-6u c1-b c1-c c1-q c1-r c1-d c1-e c1-f c1-g" style="background-color: #50c878;">
+            <section data-ux="Section" class="x-el x-el-section c1-1 c1-2 c1-bu c1-5i c1-6u c1-b c1-c c1-q c1-r c1-d c1-e c1-f c1-g" style="background-color: #9AC67B;">
                     <div data-ux="Divider" class="x-el x-el-div c1-1 c1-2 c1-bu c1-53 c1-54 c1-10 c1-b c1-c c1-d c1-e c1-f c1-g">
                         <div data-ux="Container" class="x-el x-el-div c1-1 c1-2 c1-v c1-w c1-x c1-y c1-z c1-b c1-c c1-12 c1-d c1-13 c1-e c1-14 c1-f c1-15 c1-g">
                             <hr aria-hidden="true" role="separator" data-ux="DividerHR" class="x-el x-el-hr c1-1 c1-2 c1-g0 c1-dt c1-dw c1-2d c1-2e c1-4 c1-b c1-c c1-d c1-e c1-f c1-g" />
@@ -4305,7 +4344,7 @@ td:last-of-type, th:last-of-type {
                             <div data-ux="Grid" class="x-el x-el-div c1-1 c1-2 c1-16 c1-8w c1-8x c1-87 c1-2d c1-3h c1-2e c1-3g c1-19 c1-6n c1-b c1-c c1-d c1-e c1-f c1-g">
                                 <div data-ux="GridCell" class="x-el x-el-div c1-1 c1-2 c1-8w c1-g1 c1-95 c1-96 c1-z c1-27 c1-28 c1-29 c1-2a c1-b c1-c c1-d c1-g2 c1-g3 c1-e c1-f c1-g">
                                     <div data-ux="FooterDetails" data-aid="FOOTER_COPYRIGHT_RENDERED" data-typography="DetailsGamma" class="x-el c1-g4 c1-3v c1-1s c1-1t c1-4x c1-2d c1-2e c1-b c1-g5 c1-el c1-3z c1-em c1-bp c1-en c1-eo c1-ep x-rt">
-                                        <p style="margin:0"><span>Copyright © 2023 Eden Property Solutions - All Rights Reserved.</span></p>
+                                        <p style="margin:0"><span>Copyright © 2023 Eben Property Solutions - All Rights Reserved.</span></p>
                                     </div>
                                 </div>
                                 <div data-ux="GridCell" class="x-el x-el-div c1-1 c1-2 c1-8w c1-6r c1-95 c1-96 c1-z c1-27 c1-28 c1-29 c1-2a c1-6s c1-b c1-c c1-d c1-g2 c1-g3 c1-e c1-f c1-g">
