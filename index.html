@@ -4436,20 +4436,38 @@ td:last-of-type, th:last-of-type {
 <br>
 <br>
 <style type="text/css">
-        /* Some custom styles to beautify this example */
+    /* Some custom styles to beautify this example */
+    .demo-content {
+        padding: 15px;
+        font-size: 18px;
+        min-height: 300px;
+        margin-bottom: 20px;
+    }
+    
+    /* Ensure images are responsive and won't overlap text */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block; /* Center images */
+        margin: 0 auto; /* Center horizontally */
+    }
+
+    /* Reduce margin and padding for smaller screens */
+    @media (max-width: 768px) {
         .demo-content {
-            padding: 15px;
-            font-size: 18px;
-            min-height: 300px;
-            margin-bottom: 20px;
+            padding: 10px; /* Adjust padding */
+            margin-bottom: 10px; /* Adjust margin */
         }
         
-        /* Ensure images are responsive and won't overlap text */
-        img {
-            max-width: 100%;
-            height: auto;
+        /* Adjust margin and padding for the container divs */
+        .container {
+            margin-top: 20px; /* Adjust margin between container divs */
         }
-    </style>
+    }
+</style>
+
+
+
 <div style="background-color: #9AC67B;">
 <div class="container" style="background-color: #9AC67B; margin-top: 50px;">
     <!-- Row with two equal columns -->
@@ -4458,7 +4476,7 @@ td:last-of-type, th:last-of-type {
             <br>
             <br>
             <div class "demo-content">
-                <img src="https://wallpapers.com/images/hd/teamwork-pictures-gosu0jbjydd4sfow.jpg" style="width: 100%; height: 300px;">
+                <img src="https://wallpapers.com/images/hd/teamwork-pictures-gosu0jbjydd4sfow.jpg" style="width: 50%;">
             </div>
         </div>
         <div class="col-sm-6">
@@ -4469,8 +4487,7 @@ td:last-of-type, th:last-of-type {
             </div>
         </div>
     </div>
-<br>
-<br>
+
     </div>
 
 <!-- Repeat the same structure for the other sections -->
@@ -4481,16 +4498,14 @@ td:last-of-type, th:last-of-type {
             <div class="demo-content">
                 <p style="text-align: center;"><b style="text-align: center; color: white; font-family: 'Fjalla One', sans-serif;font-size: 30px; margin-top: 0px;">Our Story</b><br>
                     Our journey began in 2023 when our founder, Rudo Shoko, was passionate about creating a business that would make a difference. Today, Eben Property Solutions has become a haven for those struggling on the verge of foreclosure and individuals desiring a fresh start.
-                    <br>
-                <br>
-                <br>
+                
                 </p>
                 
             </div>
         </div>
         <div class="col-sm-6">
             <div class="demo-content bg-alt text-center" style="display: flex; flex-direction: column; justify-content: center; height: 10vh;">
-                <img src="images/994.png" style="width: 100%; height: 600px; margin-top: 50px;">
+                <img src="images/994.png" style="width: 50%; margin-top: 50px; ">
             </div>
         </div>
     </div>
@@ -4501,23 +4516,24 @@ td:last-of-type, th:last-of-type {
     <div class="row">
         <div class="col-sm-6">
             <div class "demo-content">
-                <img src="images/1827.png" style="width: 100%; height: 600px;">
+                <img src="images/1827.png" style="width: 50%;">
+                <br>
+<br>
             </div>
         </div>
         <div class="col-sm-6">
-            <br>
-            <br>
+        
             <div class="demo-content bg-alt text-center" style="display: flex; flex-direction: column; justify-content: center; height: 10vh;">
                 <p><b style="text-align: center; color: white;font-family: 'Fjalla One', sans-serif; font-size: 30px;">Our Team</b><br>
                     Our team at Eben Property Solutions works with the nation's most prominent female investor group. With multiple investors choosing to fix and flip or buy and hold, we get your deal funded fast.
                     We share the goal of creating a better future for families and individuals. From our day-one offer to fast closings, we are committed to positively impacting the world.
+                
                 </p>
             </div>
         </div>
     </div>
 </div>
-<br>
-<br>
+
 </div>
 
     </div>
