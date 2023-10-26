@@ -4078,72 +4078,61 @@ body {
            
 
 
-
-
-
-
-
-
-
 <div class="text-picture">
-    
-        <div class="container" id="c">
-        <h2 style="text-align: center;font-family: 'Fjalla One', sans-serif;">Does This Sound Like Your Situation:</h2>
+    <div class="container" id="c">
+        <h2 style="text-align: center; font-family: 'Fjalla One', sans-serif;">Does This Sound Like Your Situation:</h2>
+        <div class="row">
+            <div class="col-5 module-text">
+                <ul class="list-group list-group-horizontal list-group-flush" style="font-size: 15px; text-align: right;"> <!-- Add list-group-flush class to remove borders -->
+                    <li class="list-group-item">Listing expired?</li>
+                    <li class="list-group-item">Vacant house?</li>
+                    <li class="list-group-item">Tired landlord?</li>
+                    <li class="list-group-item">Need a bigger home?</li>
+                    <li class="list-group-item">Health problems?</li>
+                    <li class="list-group-item">Want a 1-story home?</li>
+                    <li class="list-group-item">Estate sale?</li>
+                    <li class="list-group-item">100% financed?</li>
+                    <li class="list-group-item">Can’t wait to sell?</li>
+                    <li class="list-group-item">Behind on payments?</li>
 
-            <div class="row">
-            <div class="col-6 module-text">
-                <ul style="font-size: 15px; list-style: none; padding: 0; margin: 30;">
-                    <li>Listing expired?</li>
-                    <li>Vacant house?</li>
-                    <li>Tired landlord?</li>
-                    <li>Need a bigger home?</li>
-                    <li>Health problems?</li>
-                    <li>Want a 1-story home?</li>
-                    <li>Estate sale?</li>
-                    <li>100% financed?</li>
-                    <li>Can’t wait to sell?</li>
-                    <li>2 house payments?</li>
-                    <li>Inheritance?</li>
-                    <li>Separation?</li>
-                    <li>Promotion?</li>
-                    <li>Owe liens?</li>
+                    <li class="list-group-item">Inheritance?</li>
+                    <li class="list-group-item">Separation?</li>
+                    <li class="list-group-item">Promotion?</li>
                 </ul>
             </div>
-            <div class="col-6 module-pic">
-                <ul style="font-size: 15px; list-style: none; padding: 0; margin: 0;">
-                    <li>In foreclosure?</li>
-                    <li>Hate your neighbors?</li>
-                    <li>Need more room?</li>
-                    <li>Down-sizing?</li>
-                    <li>Want a 2-story house?</li>
-                    <li>Escrow shortage?</li>
-                    <li>Behind on payments?</li>
-                    <li>Bankruptcy?</li>
-                    <li>Want to relocate abroad?</li>
-                    <li>Need repairs?</li>
-                    <li>Adopting?</li>
-                    <li>Divorce?</li>
+            <div class="col-5 module-pic" style="background-color: white">
+                <ul class="list-group list-group-horizontal list-group-flush" style="font-size: 15px; text-align: center;"> <!-- Add list-group-flush class to remove borders -->
+                    <li class="list-group-item">In foreclosure?</li>
+                    <li class="list-group-item">Need more room?</li>
+                    <li class="list-group-item">Down-sizing?</li>
+                    <li class="list-group-item">Want a 2-story house?</li>
+                    <li class="list-group-item">Escrow shortage?</li>
+                    <li class="list-group-item">Hate your neighbors?</li>
+                    <li class="list-group-item">2 house payments?</li>
+
+                    <li class="list-group-item">Bankruptcy?</li>
+                    <li class="list-group-item">Need repairs?</li>
+                    <li class="list-group-item">Want to relocate abroad?</li>
+
+                    <li class="list-group-item">Adopting?</li>
+                    <li class="list-group-item">Divorce?</li>
+                    <li class="list-group-item">Owe liens?</li>
+
                 </ul>
             </div>
-
-            </div>
+            <style>
+    .list-group-horizontal .list-group-item {
+        border: none; /* Remove any borders on list items */
+        text-decoration: none; /* Remove text decoration (underline) */
+    }
+</style>
         </div>
     </div>
+</div>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-   
     
 <div class="text-picture">
  
@@ -4373,6 +4362,35 @@ td:last-of-type, th:last-of-type {
 
     }
 
+}
+
+td, th {
+  border: 2px solid #000; /* Make the inside lines dark and thick */
+  padding: .5rem;
+}
+
+th {
+  text-align: left;
+  background-color: rgb(190, 220, 250);
+  text-transform: uppercase;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgb(50, 50, 100); /* Dark and thick border at the bottom of th */
+  border-top: none;
+}
+
+td {
+  white-space: nowrap;
+  border-bottom: none;
+  color: rgb(20, 20, 20);
+}
+
+td:first-of-type, th:first-of-type {
+  border-left: none;
+}
+
+td:last-of-type, th:last-of-type {
+  border-right: none;
 }
 
 
